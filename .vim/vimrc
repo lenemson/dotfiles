@@ -66,5 +66,9 @@ highlight Space ctermbg=darkred guibg=darkred
 " Airline always active
 set laststatus=2
 
-" Ruby indentation, 2 spaces
+" Ruby/erb indentation, 2 spaces
 autocmd Filetype ruby set expandtab shiftwidth=2 softtabstop=2
+autocmd Filetype eruby set expandtab shiftwidth=2 softtabstop=2
+
+" js indentation, 2 spaces
+autocmd Filetype javascript set expandtab shiftwidth=2 softtabstop=2

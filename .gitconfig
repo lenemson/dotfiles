@@ -6,3 +6,5 @@
 	email = jibanez@student.42.fr
 [push]
 	default = matching
+[color]
+	ui = true
