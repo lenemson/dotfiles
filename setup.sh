@@ -17,7 +17,7 @@ GRN="\033[0;32m"
 BLU="\033[0;34m"
 RED="\033[0;31m"
 YEL="\033[0;33m"
-PUR="\033[0;35m"
+PUR="\033[1;35m"
 NON="\033[0m"
 
 # Gets the absolute path of the dotfiles directory
@@ -60,7 +60,7 @@ savedir() {
 }
 
 # (-(-.(-.-).-)-)
-echo $GRN"> Doftfiles git repository path: $DOTFILES_DIR"$NON
+echo $GRN"# Doftfiles git repository path: $DOTFILES_DIR"$NON
 
 # Git
 title "Git"
