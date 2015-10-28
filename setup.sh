@@ -6,7 +6,7 @@
 #    By: jibanez <jibanez@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/10/28 14:31:48 by jibanez           #+#    #+#              #
-#    Updated: 2015/10/28 17:12:31 by jibanez          ###   ########.fr        #
+#    Updated: 2015/10/28 17:22:10 by jibanez          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,7 +43,7 @@ if [ $ZSH == $HOME/.oh-my-zsh ]; then
 	echo "Oh My Zsh already installed"
 else
 	echo "installing Oh My Zsh"
-	exe sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+	sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 fi
 # Symlinks zshrc
 exe ln -s $DOTFILES_DIR/.zshrc .
