@@ -6,7 +6,7 @@
 #    By: jibanez <jibanez@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/10/28 14:31:48 by jibanez           #+#    #+#              #
-#    Updated: 2015/10/28 18:21:34 by jibanez          ###   ########.fr        #
+#    Updated: 2015/10/28 18:37:47 by jibanez          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -92,7 +92,8 @@ if [ -d $HOME/.oh-my-zsh ]; then
 	echo "Oh My Zsh already installed"
 else
 	echo "Installing Oh My Zsh"
-	sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+	exe git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+	#sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 fi
 # Symlinks zshrc
 save .zshrc
@@ -101,4 +102,5 @@ exe ln -s $DOTFILES_DIR/.zshrc .
 cd .oh-my-zsh/
 mv custom $DOTFILES_DIR/oldrc/custom.$(date +"%Y-%m-%d_%H-%M-%S")
 exe ln -s $DOTFILES_DIR/.oh-my-zsh/custom .
+cd $HOME
 exec zsh
