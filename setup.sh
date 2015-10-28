@@ -6,7 +6,7 @@
 #    By: jibanez <jibanez@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/10/28 14:31:48 by jibanez           #+#    #+#              #
-#    Updated: 2015/10/28 18:05:16 by jibanez          ###   ########.fr        #
+#    Updated: 2015/10/28 18:21:34 by jibanez          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -82,13 +82,13 @@ eval "$(rbenv init -)"
 # End
 echo $GRN"\n\nTo Do:\n"
 echo "- Install solarized for iTerm2\n\t-> https://github.com/altercation/solarized"
-echo "- Install ruby -> rbenv install 2.2.3 && rbenv global 2.2.3\n"
-echo "- Install brew -> ruby -e $(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)\n"$NON
+echo "- Install ruby\n\t-> rbenv install 2.2.3 && rbenv global 2.2.3"
+echo "- Install brew\n\t-> ruby -e \$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"$NON
 
 # Zsh
 echo "\n$BLU Zsh: $NON"
 # Install oh my zsh if needed
-if [ -f $HOME/.oh-my-zsh ]; then
+if [ -d $HOME/.oh-my-zsh ]; then
 	echo "Oh My Zsh already installed"
 else
 	echo "Installing Oh My Zsh"
@@ -97,6 +97,8 @@ fi
 # Symlinks zshrc
 save .zshrc
 exe ln -s $DOTFILES_DIR/.zshrc .
-# Symlinks Oh My Zsh custom directory
+# Symlinks Oh My Zsh custom directory, save the current
 cd .oh-my-zsh/
+mv custom $DOTFILES_DIR/oldrc/custom.$(date +"%Y-%m-%d_%H-%M-%S")
 exe ln -s $DOTFILES_DIR/.oh-my-zsh/custom .
+exec zsh
