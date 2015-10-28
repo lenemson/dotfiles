@@ -57,6 +57,7 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 # Rbenv
 eval "$(rbenv init -)"
 
+# Reload zsh
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment

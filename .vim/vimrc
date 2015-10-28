@@ -6,7 +6,7 @@
 "    By: jibanez <jibanez@42.fr>                    +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2015/01/14 12:11:04 by jibanez           #+#    #+#              "
-"    Updated: 2015/01/14 13:52:28 by jibanez          ###   ########.fr        "
+"    Updated: 2015/10/28 14:27:30 by jibanez          ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -16,7 +16,8 @@ filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin 'gmarik/Vundle.vim'
+" Let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
 
 "Plugin 'scrooloose/syntastic.vim'
 "set statusline+=%#warningmsg#
