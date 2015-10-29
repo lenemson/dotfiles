@@ -112,7 +112,7 @@ if [ ! -f $HOME/.bin/dotfiles.sh ]; then
 	cp $DOTFILES_DIR/dotfiles.sh $HOME/.bin
 	chmod u+x $HOME/.bin/dotfiles.sh
 fi
-info "dotfiles.sh has been placed in ~/.bin, it can now be used to manage dotfiles"
+info "\ndotfiles.sh has been placed in ~/.bin, it can now be used to manage dotfiles"
 # Run a new zsh processus to load the new .zshrc
 cd $HOME
 exec zsh
