@@ -45,7 +45,6 @@ update() {
 }
 
 sync() {
-	#echo $1
 	cd $HOME/.dotfiles
 	git add -A
 	git commit -m "$1"
@@ -61,8 +60,7 @@ elif [ $# == 2 ] && [ $1 == "update" ]; then
 elif [ $# == 1 ] && [ $1 == "sync" ]; then
 	sync "Update dotfiles"
 elif [ $# == 2 ] && [ $1 == "sync" ]; then
-	echo $2
-	sync $2
+	sync "$2"
 else
 	usage
 fi
