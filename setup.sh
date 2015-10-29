@@ -12,10 +12,6 @@ NON="\033[0m"
 # Eg. ~/.dotfiles
 DOTFILES_DIR="$HOME/.dotfiles"
 
-# Creates an `oldrc` directory to store old config files/directories
-# This directory will be ignored by git
-mkdir -p $DOTFILES_DIR/oldrc/.oh-my-zsh
-
 # Prints a title
 title() { echo "\n"$BLU"$@:"$NON ; }
 
@@ -52,6 +48,9 @@ if [ -d $DOTFILES_DIR ]; then
 	rm -rf $DOTFILES_DIR
 fi
 trygit https://github.com/lenemson/dotfiles $DOTFILES_DIR
+# Creates an `oldrc` directory to store old config files/directories
+# This directory will be ignored by git
+mkdir -p $DOTFILES_DIR/oldrc/.oh-my-zsh
 # (-(-.(-.-).-)-)
 echo $GRN"# Doftfiles git repository path: $DOTFILES_DIR"$NON
 
