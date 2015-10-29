@@ -52,7 +52,7 @@ trygit https://github.com/lenemson/dotfiles $DOTFILES_DIR
 # This directory will be ignored by git
 mkdir -p $DOTFILES_DIR/oldrc/.oh-my-zsh
 # (-(-.(-.-).-)-)
-echo $GRN"# Doftfiles git repository path: $DOTFILES_DIR"$NON
+echo $GRN"# Dotfiles git repository path: $DOTFILES_DIR"$NON
 
 # Git
 title "Git"
@@ -112,6 +112,7 @@ if [ ! -f $HOME/.bin/dotfiles.sh ]; then
 	cp $DOTFILES_DIR/dotfiles.sh $HOME/.bin
 	chmod u+x $HOME/.bin/dotfiles.sh
 fi
+info "dotfiles.sh has been placed in ~/.bin, it can now be used to manage dotfiles"
 # Run a new zsh processus to load the new .zshrc
 cd $HOME
 exec zsh
