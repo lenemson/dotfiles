@@ -10,7 +10,7 @@ NON="\033[0m"
 
 # Gets the absolute path of the dotfiles directory
 # Eg. ~/.dotfiles
-DOTFILES_DIR="$(cd "$(dirname $0)" && pwd)"
+DOTFILES_DIR="$HOME/.dotfiles"
 
 # Creates an `oldrc` directory to store old config files/directories
 # This directory will be ignored by git
@@ -47,6 +47,11 @@ savedir() {
 	fi
 }
 
+# If ~/dotfiles already exists, delete it and re git clone it
+if [ -d $DOTFILES_DIR ]; then
+	rm -rf $DOTFILES_DIR
+fi
+trygit https://github.com/lenemson/dotfiles $DOTFILES_DIR
 # (-(-.(-.-).-)-)
 echo $GRN"# Doftfiles git repository path: $DOTFILES_DIR"$NON
 
@@ -101,6 +106,13 @@ title "To Do"
 echo "- Install solarized for iTerm2\n\t-> https://github.com/altercation/solarized"
 echo "- Install ruby\n\t-> rbenv install 2.2.3 && rbenv global 2.2.3"
 echo "- Install brew\n\t-> ruby -e \$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-cd $HOME
+
+# Copy dotfiles.sh to .bin directory and make it executable
+mkdir -p $HOME/.bin
+if [ ! -f $HOME/.bin/dotfiles.sh ]; then
+	cp $DOTFILES_DIR/dotfiles.sh $HOME/.bin
+	chmod u+x $HOME/.bin/dotfiles.sh
+fi
 # Run a new zsh processus to load the new .zshrc
+cd $HOME
 exec zsh
