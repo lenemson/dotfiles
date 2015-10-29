@@ -45,6 +45,7 @@ update() {
 }
 
 sync() {
+	echo $1
 	cd $HOME/.dotfiles
 	git add -A
 	git commit -m "$1"
