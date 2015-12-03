@@ -54,6 +54,10 @@ export PATH="$HOME/.brew/bin:$HOME/.bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
 
+# Rubymotion
+export RUBYMOTION_ANDROID_SDK="$HOME/.rubymotion-android/sdk"
+export RUBYMOTION_ANDROID_NDK="$HOME/.rubymotion-android/ndk"
+
 # Rbenv
 eval "$(rbenv init -)"
 
