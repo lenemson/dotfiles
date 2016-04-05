@@ -23,5 +23,10 @@ alias 'ber'='bundle exec rails'
 # Souk
 alias c='clear'
 
-# LOVE
+# LOVE lua
 alias loverun='open -n -a love'
+
+# Docker/Docker-Machine
+alias 'dinit'='eval "$(docker-machine env default)"'
+alias 'dm'='docker-machine'
+alias 'dc'='docker-compose'

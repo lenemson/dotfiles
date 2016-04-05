@@ -61,6 +61,9 @@ export RUBYMOTION_ANDROID_NDK="$HOME/.rubymotion-android/ndk"
 # Rbenv
 eval "$(rbenv init -)"
 
+# Docker, prefer to use dinit aliase when needed
+#eval "$(docker-machine env default)"
+
 # Reload zsh
 source $ZSH/oh-my-zsh.sh
 

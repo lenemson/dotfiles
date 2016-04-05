@@ -39,8 +39,8 @@ tst
 dev
 cmp.me
 
-# Corewar
-*.cor
+# Redis
+dump.rdb
 
 # Rails
 
