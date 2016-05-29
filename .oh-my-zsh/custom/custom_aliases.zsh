@@ -28,5 +28,6 @@ alias loverun='open -n -a love'
 
 # Docker/Docker-Machine
 alias 'dinit'='eval "$(docker-machine env default)"'
+alias 'drmi'='docker rmi $(docker images -f dangling=true -q)'
 alias 'dm'='docker-machine'
 alias 'dc'='docker-compose'

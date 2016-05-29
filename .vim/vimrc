@@ -69,6 +69,9 @@ set laststatus=2
 autocmd Filetype ruby set expandtab shiftwidth=2 softtabstop=2
 autocmd Filetype eruby set expandtab shiftwidth=2 softtabstop=2
 
+" Go indentation, 2 spaces
+autocmd Filetype go set expandtab shiftwidth=2 softtabstop=2
+
 " js indentation, 2 spaces
 autocmd Filetype javascript set expandtab shiftwidth=2 softtabstop=2
 
