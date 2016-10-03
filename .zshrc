@@ -49,7 +49,7 @@ plugins=(git)
 
 # User configuration
 
-PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/texbin
+PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/usr/local/sbin:/sbin:/opt/X11/bin:/usr/texbin
 export PATH="$HOME/.brew/bin:$HOME/.bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"

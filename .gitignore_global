@@ -42,7 +42,8 @@ cmp.me
 # Redis
 dump.rdb
 
-# Rails
+# Ghost
+content/images/*/*
 
 # Unity
 Temp

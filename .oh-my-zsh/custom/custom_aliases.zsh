@@ -26,8 +26,11 @@ alias c='clear'
 # LOVE lua
 alias loverun='open -n -a love'
 
-# Docker/Docker-Machine
+# Docker
 alias 'dinit'='eval "$(docker-machine env default)"'
 alias 'drmi'='docker rmi $(docker images -f dangling=true -q)'
 alias 'dm'='docker-machine'
 alias 'dc'='docker-compose'
+
+# React Native
+alias 'rn'='react-native'
