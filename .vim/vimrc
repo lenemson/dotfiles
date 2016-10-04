@@ -21,12 +21,13 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'docker/docker' , {'rtp': '/contrib/syntax/vim/'}
+Plugin 'ervandew/supertab'
 
 call vundle#end()            " required
 
-"filetype plugin indent on    " required
+filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
-filetype plugin on
+"filetype plugin on
 
 "
 " Brief help
@@ -44,8 +45,20 @@ filetype plugin on
 
 set number
 syntax on
-colorscheme solarized
 set mouse=a
+
+set bs=2
+set number
+set ruler
+set laststatus=2
+set hlsearch
+set cursorline
+"set textwidth=80
+set nowrap
+
+set expandtab
+set tabstop=2
+set shiftwidth=2
 
 let g:airline_theme='luna'
 
@@ -54,23 +67,3 @@ autocmd BufWinEnter * let w:m2=matchadd('Tab', '\t', -1)
 autocmd BufWinEnter * let w:m3=matchadd('Space', '\s\+$\| \+\ze\t', -1)
 highlight Tab ctermbg=none guibg=none
 highlight Space ctermbg=darkred guibg=darkred
-
-" Airline always active
-set laststatus=2
-
-" Ruby/erb indentation, 2 spaces
-autocmd Filetype ruby set expandtab shiftwidth=2 softtabstop=2
-autocmd Filetype eruby set expandtab shiftwidth=2 softtabstop=2
-
-" Go indentation, 2 spaces
-autocmd Filetype go set expandtab shiftwidth=2 softtabstop=2
-
-" js indentation, 2 spaces
-autocmd Filetype javascript set expandtab shiftwidth=2 softtabstop=2
-
-" html indentation, 2 spaces
-autocmd Filetype html set expandtab shiftwidth=2 softtabstop=2
-
-" css scss indentation, 2 spaces
-autocmd Filetype css set expandtab shiftwidth=2 softtabstop=2
-autocmd Filetype scss set expandtab shiftwidth=2 softtabstop=2
