@@ -20,8 +20,10 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'docker/docker' , {'rtp': '/contrib/syntax/vim/'}
+Plugin 'scrooloose/nerdtree'
 Plugin 'ervandew/supertab'
+Plugin 'docker/docker' , {'rtp': '/contrib/syntax/vim/'}
+Plugin 'airblade/vim-gitgutter'
 
 call vundle#end()            " required
 
@@ -43,6 +45,8 @@ filetype plugin indent on    " required
 " Non vundle config "
 "###################"
 
+colorscheme iceberg
+
 set number
 syntax on
 set mouse=a
@@ -60,10 +64,30 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 
-let g:airline_theme='luna'
+set encoding=utf-8
+
+" Auto NERDTree without focus
+"autocmd vimenter * NERDTree
+"autocmd vimenter * wincmd p
 
 " Display useless spaces before a /n
 autocmd BufWinEnter * let w:m2=matchadd('Tab', '\t', -1)
 autocmd BufWinEnter * let w:m3=matchadd('Space', '\s\+$\| \+\ze\t', -1)
 highlight Tab ctermbg=none guibg=none
 highlight Space ctermbg=darkred guibg=darkred
+
+" Airline
+let g:airline_theme='luna'
+let g:airline_powerline_fonts = 1
+
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+
+" unicode symbols
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '◀'
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.whitespace = 'Ξ'
