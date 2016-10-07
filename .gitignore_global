@@ -47,3 +47,6 @@ content/images/*/*
 
 # Unity
 Temp
+
+# Tmux
+tmux-client-*.log

@@ -84,6 +84,13 @@ savefile .bashrc
 exe ln -s $DOTFILES_DIR/.bashrc $HOME
 info "Bash config done!"
 
+# Tmux
+title "Tmux"
+# Symlink tmux.conf
+savefile .tmux.conf
+exe ln -s $DOTFILES_DIR/.tmux.conf $HOME
+info "Tmux config done!"
+
 # Copy dotfiles.sh to .bin directory and make it executable
 mkdir -p $HOME/.bin
 if [ ! -f $HOME/.bin/dotfiles.sh ]; then
