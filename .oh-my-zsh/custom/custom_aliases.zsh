@@ -1,3 +1,5 @@
+alias src='source ~/.zshrc'
+
 # Basic directory operations
 alias ccd='cd ..'
 
@@ -5,6 +7,13 @@ alias ccd='cd ..'
 alias l='ls -lh'
 alias ll='ls -lh'
 alias la='ls -lah'
+
+# Git
+alias g='git status'
+alias gb='git git branch'
+
+# Tmux
+alias ta='tmux a -t'
 
 # C/C++
 alias 'gccc'='gcc -Wall -Wextra -Werror'

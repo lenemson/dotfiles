@@ -54,19 +54,12 @@ export PATH="$HOME/.brew/bin:$HOME/.bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
 
-# Rubymotion
-export RUBYMOTION_ANDROID_SDK="$HOME/.rubymotion-android/sdk"
-export RUBYMOTION_ANDROID_NDK="$HOME/.rubymotion-android/ndk"
-
 # Go
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
 # Rbenv
 eval "$(rbenv init -)"
-
-# Docker (Does not work if docker-machine off)
-eval "$(docker-machine env default)"
 
 # Reload zsh
 source $ZSH/oh-my-zsh.sh
