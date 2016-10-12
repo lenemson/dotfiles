@@ -4,8 +4,9 @@ alias ll='ls -l'
 alias la='ls -la'
 alias ccd='cd ..'
 alias g='git status'
-alias gd='git branch'
-alias 'tmuxat'='tmux a -t'
+alias gb='git branch'
+alias 'ta'='tmux a -t'
+alias 'src'='source ~/.bashrc'
 
 # Prompt
 force_color_prompt=yes
