@@ -1,12 +1,20 @@
-# Aliases
+alias 'src'='source ~/.bashrc'
+
+# Fs aliases
 alias l='ls -l'
 alias ll='ls -l'
 alias la='ls -la'
 alias ccd='cd ..'
+
+# Git aliases
 alias g='git status'
 alias gb='git branch'
+
+# Tmux aliases
 alias 'ta'='tmux a -t'
-alias 'src'='source ~/.bashrc'
+
+# Path
+export PATH=~/.bin:$PATH
 
 # Prompt
 force_color_prompt=yes
