@@ -9,6 +9,7 @@ alias ccd='cd ..'
 # Git aliases
 alias g='git status'
 alias gb='git branch'
+alias gd='git diff'
 
 # Tmux aliases
 alias 'ta'='tmux a -t'
