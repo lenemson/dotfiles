@@ -22,7 +22,6 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdtree'
 Plugin 'ervandew/supertab'
-Plugin 'docker/docker' , {'rtp': '/contrib/syntax/vim/'}
 Plugin 'airblade/vim-gitgutter'
 
 call vundle#end()            " required
