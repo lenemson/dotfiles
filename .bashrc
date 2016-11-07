@@ -1,18 +1,20 @@
 alias 'src'='source ~/.bashrc'
 
 # Fs aliases
-alias l='ls -l'
-alias ll='ls -l'
-alias la='ls -la'
+alias l='ls -l --group-directories-first'
+alias lx='l -X'
+alias la='l -a'
 alias ccd='cd ..'
 
 # Git aliases
 alias g='git status'
 alias gb='git branch'
+alias gc='git checkout'
 alias gd='git diff'
 
 # Tmux aliases
 alias 'ta'='tmux a -t'
+alias 'at'='tmux a -t'
 
 # Path
 export PATH=~/.bin:$PATH
