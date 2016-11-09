@@ -25,7 +25,7 @@ push() {
 if [ $# == 0 ]; then
 	usage
 elif [ $# == 1 ] && [ $1 == "pull" ]; then
-	update
+	pull
 elif [ $# == 1 ] && [ $1 == "push" ]; then
 	push "Update dotfiles"
 elif [ $# == 2 ] && [ $1 == "push" ]; then
