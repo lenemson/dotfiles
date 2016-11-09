@@ -77,43 +77,27 @@ exe ln -s $HOME/.vim/vimrc $HOME/.vimrc
 exe vim +PluginInstall +qall
 info "Vim config done!"
 
-# Ruby
-title "Ruby"
-# Symlinks gemrc
-savefile .gemrc
-exe ln -s $DOTFILES_DIR/.gemrc $HOME
-# Install rbenv
-trygit https://github.com/sstephenson/rbenv.git $HOME/.rbenv
-# Install ruby-build (rbenv install enhancer)
-trygit https://github.com/sstephenson/ruby-build.git $HOME/.rbenv/plugins/ruby-build
-info "Ruby config done!"
-
-# Zsh
-title "Zsh"
-# Install/Clone oh my zsh
-trygit https://github.com/robbyrussell/oh-my-zsh.git $HOME/.oh-my-zsh
+# Bash
+title "Bash"
 # Symlinks zshrc
-savefile .zshrc
-exe ln -s $DOTFILES_DIR/.zshrc $HOME
-# Symlinks Oh My Zsh custom directory, save the current
-savedir .oh-my-zsh/custom
-exe ln -s $DOTFILES_DIR/.oh-my-zsh/custom $HOME/.oh-my-zsh
-info "Zsh config done!"
+savefile .bashrc
+exe ln -s $DOTFILES_DIR/.bashrc $HOME
+info "Bash config done!"
 
-# To Do
-title "To Do"
-echo "- Install solarized for iTerm2\n\t-> https://github.com/altercation/solarized"
-echo "- Install ruby\n\t-> rbenv install 2.2.3 && rbenv global 2.2.3"
-echo "- Install brew\n\t-> ruby -e \$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+# Tmux
+title "Tmux"
+# Symlink tmux.conf
+savefile .tmux.conf
+exe ln -s $DOTFILES_DIR/.tmux.conf $HOME
+info "Tmux config done!"
 
 # Copy dotfiles.sh to .bin directory and make it executable
 mkdir -p $HOME/.bin
 if [ ! -f $HOME/.bin/dotfiles.sh ]; then
-	cp $DOTFILES_DIR/dotfiles.sh $HOME/.bin
-	chmod u+x $HOME/.bin/dotfiles.sh
+	cp $DOTFILES_DIR/dotfiles.sh $HOME/.bin/dotfiles
+	chmod u+x $HOME/.bin/dotfiles
 fi
-info "\ndotfiles.sh has been placed in ~/.bin, it can now be used to manage dotfiles"
+info "\ndotfiles command has been placed in ~/.bin, it can now be used to manage dotfiles"
 
-# Run a new zsh processus to load the new .zshrc
 cd $HOME
-exec zsh
+exec bash
