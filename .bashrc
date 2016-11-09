@@ -1,7 +1,8 @@
 alias 'src'='source ~/.bashrc'
 
 # Fs aliases
-alias l='ls -l --group-directories-first'
+alias l='ls -l'
+alias ld='l --group-directories-first'
 alias lx='l -X'
 alias la='l -a'
 alias ccd='cd ..'

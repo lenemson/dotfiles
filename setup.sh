@@ -80,6 +80,7 @@ info "Vim config done!"
 # Bash
 title "Bash"
 # Symlinks zshrc
+curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -o ~/.git-prompt.sh
 savefile .bashrc
 exe ln -s $DOTFILES_DIR/.bashrc $HOME
 info "Bash config done!"
@@ -93,10 +94,8 @@ info "Tmux config done!"
 
 # Copy dotfiles.sh to .bin directory and make it executable
 mkdir -p $HOME/.bin
-if [ ! -f $HOME/.bin/dotfiles.sh ]; then
-	cp $DOTFILES_DIR/dotfiles.sh $HOME/.bin/dotfiles
-	chmod u+x $HOME/.bin/dotfiles
-fi
+cp $DOTFILES_DIR/dotfiles.sh $HOME/.bin/dotfiles
+chmod u+x $HOME/.bin/dotfiles
 info "\ndotfiles command has been placed in ~/.bin, it can now be used to manage dotfiles"
 
 cd $HOME
