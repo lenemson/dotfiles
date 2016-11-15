@@ -1,4 +1,5 @@
-alias 'src'='source ~/.bashrc'
+alias brc='vim ~/.bashrc'
+alias src='source ~/.bashrc'
 
 # Fs aliases
 alias l='ls -l'
@@ -14,8 +15,14 @@ alias gc='git checkout'
 alias gd='git diff'
 
 # Tmux aliases
-alias 'ta'='tmux a -t'
-alias 'at'='tmux a -t'
+alias ta='tmux a -t'
+alias at='tmux a -t'
+
+# Curl
+function curll {
+  echo curl -X POST -d $2 localhost:$1
+  curl -X POST -d $2 localhost:$1
+}
 
 # Path
 export PATH=~/.bin:$PATH
