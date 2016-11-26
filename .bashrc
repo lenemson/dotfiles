@@ -18,6 +18,9 @@ alias gd='git diff'
 alias ta='tmux a -t'
 alias at='tmux a -t'
 
+# Docker
+alias dc='docker-compose'
+
 # Curl
 function curll {
   echo curl -X POST -d $2 localhost:$1
