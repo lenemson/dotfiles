@@ -24,6 +24,11 @@ function curll {
   curl -X POST -d $2 localhost:$1
 }
 
+# Token gen
+function token {
+  openssl rand -base64 $1
+}
+
 # Path
 export PATH=~/.bin:$PATH
 
