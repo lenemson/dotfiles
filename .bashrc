@@ -33,7 +33,7 @@ function token {
 }
 
 # Path
-export PATH=~/.bin:$PATH
+export PATH=~/bin:$PATH
 
 # Prompt
 GITRC=~/.git-prompt.sh
@@ -49,6 +49,10 @@ export PS1='\[$(tput bold)\]\[\033[38;5;243m\]\u\[$(tput sgr0)\]\[\033[38;5;247m
 
 # Set default editor for commands like crontab
 export VISUAL=vim
+
+# nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
 
 # Import other bashrc
 RC=~/.bashrc_webedia
