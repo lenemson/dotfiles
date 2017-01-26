@@ -93,10 +93,10 @@ exe ln -s $DOTFILES_DIR/.tmux.conf $HOME
 info "Tmux config done!"
 
 # Copy dotfiles.sh to .bin directory and make it executable
-mkdir -p $HOME/.bin
-cp $DOTFILES_DIR/dotfiles.sh $HOME/.bin/dotfiles
-chmod u+x $HOME/.bin/dotfiles
-info "\ndotfiles command has been placed in ~/.bin, it can now be used to manage dotfiles"
+mkdir -p $HOME/bin
+cp $DOTFILES_DIR/dotfiles.sh $HOME/bin/dotfiles
+chmod u+x $HOME/bin/dotfiles
+info "\ndotfiles command has been placed in ~/bin, it can now be used to manage dotfiles"
 
 cd $HOME
 exec bash
