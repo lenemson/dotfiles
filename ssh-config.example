@@ -4,4 +4,4 @@ Host example
 Hostname 127.0.0.1
 Port 22
 User example
-IdentityFile $HOME/.ssh/example.pub
+IdentityFile ~/.ssh/example.pub
