@@ -1,3 +1,10 @@
+# Import other bashrc
+RC=~/.bashrc_webedia
+if [ -f $RC ]; then
+  source $RC
+  echo imported $RC
+fi
+
 alias brc='vim ~/.bashrc'
 alias src='source ~/.bashrc'
 
@@ -17,6 +24,9 @@ alias gd='git diff'
 # Tmux aliases
 alias ta='tmux a -t'
 alias at='tmux a -t'
+
+# Node js
+export NODE_ENV=development
 
 # Docker
 alias dc='docker-compose'
@@ -53,10 +63,3 @@ export VISUAL=vim
 # nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
-
-# Import other bashrc
-RC=~/.bashrc_webedia
-if [ -f $RC ]; then
-  source $RC
-  echo imported $RC
-fi
