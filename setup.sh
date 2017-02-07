@@ -92,8 +92,17 @@ savefile .tmux.conf
 exe ln -s $DOTFILES_DIR/.tmux.conf $HOME
 info "Tmux config done!"
 
-# Copy dotfiles.sh to .bin directory and make it executable
+# Create bin directory
 mkdir -p $HOME/bin
+
+# Copy probes into bin directory
+cp -r $DOTFILES_DIR/probes $HOME/bin
+
+# Copy pushover.sh to bin directory and make it executable
+cp $DOTFILES_DIR/pushover.sh $HOME/bin/pushover
+chmod u+x $HOME/bin/pushover
+
+# Copy dotfiles.sh to bin directory and make it executable
 cp $DOTFILES_DIR/dotfiles.sh $HOME/bin/dotfiles
 chmod u+x $HOME/bin/dotfiles
 info "\ndotfiles command has been placed in ~/bin, it can now be used to manage dotfiles"
