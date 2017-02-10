@@ -1,6 +1,6 @@
 #!/bin/bash
 # Sends push notification via pushover.net
-# Need a ~/.pushover.conf file containing TOKEN, USER and URL
+# Need a ~/.pushover.conf file containing TOKEN, USER, BASE_TITLE and URL
 # usage: sh pushover.sh <title> <message>
 
 PUSHOVER_URL="https://api.pushover.net/1/messages.json"

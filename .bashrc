@@ -25,11 +25,14 @@ alias gd='git diff'
 alias ta='tmux a -t'
 alias at='tmux a -t'
 
-# Yarn
+# Node aliases
 alias ya='yarn'
 
-# Docker
+# Docker aliases
 alias dc='docker-compose'
+
+# Other aliases
+alias j='jobs'
 
 # Node js
 export NODE_ENV=development
