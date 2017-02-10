@@ -25,11 +25,14 @@ alias gd='git diff'
 alias ta='tmux a -t'
 alias at='tmux a -t'
 
-# Node js
-export NODE_ENV=development
+# Yarn
+alias ya='yarn'
 
 # Docker
 alias dc='docker-compose'
+
+# Node js
+export NODE_ENV=development
 
 # Curl
 function curll {
