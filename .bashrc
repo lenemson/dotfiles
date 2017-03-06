@@ -5,7 +5,7 @@ if [ -f $RC ]; then
   echo imported $RC
 fi
 
-alias brc='vim ~/.bashrc'
+alias bashrc='vim ~/.bashrc'
 alias src='source ~/.bashrc'
 
 # Fs aliases
