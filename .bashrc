@@ -1,10 +1,3 @@
-# Import other bashrc
-RC=~/.bashrc_webedia
-if [ -f $RC ]; then
-  source $RC
-  echo imported $RC
-fi
-
 alias bashrc='vim ~/.bashrc'
 alias src='source ~/.bashrc'
 
