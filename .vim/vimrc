@@ -23,6 +23,8 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdtree'
 Plugin 'ervandew/supertab'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'junegunn/fzf'
+Plugin 'ctrlpvim/ctrlp.vim'
 
 call vundle#end()            " required
 
@@ -67,13 +69,17 @@ set encoding=utf-8
 
 " Auto NERDTree without focus
 "autocmd vimenter * NERDTree
-"autocmd vimenter * wincmd p
+" Close vim if the only window left open is a NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " Display useless spaces before a /n
 autocmd BufWinEnter * let w:m2=matchadd('Tab', '\t', -1)
 autocmd BufWinEnter * let w:m3=matchadd('Space', '\s\+$\| \+\ze\t', -1)
 highlight Tab ctermbg=none guibg=none
 highlight Space ctermbg=darkred guibg=darkred
+
+" `gf` opens file under cursor in a new vertical split
+nnoremap gf :vertical wincmd f<CR>
 
 " Airline
 let g:airline_theme='luna'
