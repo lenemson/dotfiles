@@ -50,7 +50,7 @@ fi
 trygit https://github.com/lenemson/dotfiles $DOTFILES_DIR
 # Creates an `oldrc` directory to store old config files/directories
 # This directory will be ignored by git
-mkdir -p $DOTFILES_DIR/oldrc/.oh-my-zsh
+mkdir -p $DOTFILES_DIR/oldrc
 # (-(-.(-.-).-)-)
 echo $GRN"# Dotfiles git repository path: $DOTFILES_DIR"$NON
 
@@ -79,8 +79,9 @@ info "Vim config done!"
 
 # Bash
 title "Bash"
-# Symlinks zshrc
+# Download git-prompt script
 curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -o ~/.git-prompt.sh
+# Symlinks bashrc
 savefile .bashrc
 exe ln -s $DOTFILES_DIR/.bashrc $HOME
 info "Bash config done!"
