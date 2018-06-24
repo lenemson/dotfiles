@@ -7,6 +7,7 @@ alias ld='l --group-directories-first'
 alias lx='l -X'
 alias la='l -a'
 alias ccd='cd ..'
+alias wdev='cd /mnt/d/dev'
 
 # Git aliases
 alias g='git status'
