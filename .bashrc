@@ -1,3 +1,8 @@
+# include device specific bashrc if it exists
+if [ -f $HOME/.devicerc ]; then
+  . $HOME/.devicerc
+fi
+
 alias bashrc='vim ~/.bashrc'
 alias src='source ~/.bashrc'
 
@@ -18,9 +23,8 @@ alias gd='git diff'
 # Tmux aliases
 alias ta='tmux a -t'
 alias at='tmux a -t'
-
-# Node aliases
-alias ya='yarn'
+alias tnew='tmux new -s'
+alias tls='tmux ls'
 
 # Docker aliases
 alias dc='docker-compose'
