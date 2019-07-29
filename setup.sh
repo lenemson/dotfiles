@@ -96,20 +96,9 @@ info "Tmux config done!"
 # Create bin directory
 mkdir -p $HOME/bin
 
-# Copy probes into bin directory
-cp -r $DOTFILES_DIR/probes $HOME/bin
+# Copy programs into home bin directory
+cp -r $DOTFILES_DIR/bin/* $HOME/bin
 
-# Copy pushover.sh to bin directory and make it executable
-cp $DOTFILES_DIR/pushover.sh $HOME/bin/pushover
-chmod u+x $HOME/bin/pushover
-
-# Copy discord.sh to bin directory and make it executable
-cp $DOTFILES_DIR/discord.sh $HOME/bin/discord
-chmod u+x $HOME/bin/discord
-
-# Copy dotfiles.sh to bin directory and make it executable
-cp $DOTFILES_DIR/dotfiles.sh $HOME/bin/dotfiles
-chmod u+x $HOME/bin/dotfiles
 info "\ndotfiles command has been placed in ~/bin, it can now be used to manage dotfiles"
 
 cd $HOME
