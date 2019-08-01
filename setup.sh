@@ -99,7 +99,7 @@ mkdir -p $HOME/bin
 # Copy programs into home bin directory
 cp -r $DOTFILES_DIR/bin/* $HOME/bin
 
-info "\ndotfiles command has been placed in ~/bin, it can now be used to manage dotfiles"
+info "\nSome programs has been placed in ~/bin"
 
 cd $HOME
 exec bash
