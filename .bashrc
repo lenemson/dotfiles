@@ -46,6 +46,10 @@ function token {
   openssl rand -base64 $1
 }
 
+function tldr() {
+  curl "https://cht.sh/$1"
+}
+
 # Path
 export PATH=~/bin:$PATH
 
