@@ -27,7 +27,11 @@ alias tnew='tmux new -s'
 alias tls='tmux ls'
 
 # Docker aliases
+alias d='docker'
 alias dc='docker-compose'
+function dsh {
+  docker exec -it $1 bash
+}
 
 # Other aliases
 alias j='jobs'
