@@ -12,7 +12,6 @@ alias ld='l --group-directories-first'
 alias lx='l -X'
 alias la='l -a'
 alias ccd='cd ..'
-alias wdev='cd /mnt/d/dev'
 
 # Git aliases
 alias g='git status'
@@ -36,11 +35,8 @@ function dsh {
 # Other aliases
 alias j='jobs'
 
-# Node js
-export NODE_ENV=development
-
 # Curl
-function curll {
+function curlp {
   echo curl -X POST -d $2 localhost:$1
   curl -X POST -d $2 localhost:$1
 }
@@ -76,8 +72,3 @@ export PS1='\[$(tput bold)\]\[\033[38;5;243m\]\u\[$(tput sgr0)\]\[\033[38;5;247m
 
 # Set default editor for commands like crontab
 export VISUAL=vim
-
-# nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
