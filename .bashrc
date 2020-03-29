@@ -54,6 +54,11 @@ function tldr() {
   curl "https://cht.sh/$1"
 }
 
+# ssh
+function ssh-md5 {
+  ssh-keygen -l -f $1 -E md5
+}
+
 # Path
 export PATH=~/bin:$PATH
 
