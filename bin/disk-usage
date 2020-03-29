@@ -1,8 +1,8 @@
 #!/bin/bash
-# Cron job that checks if disk usage exceed a certain %
-# If so, sends a push notification via pushover.net
-# example:
-# 0 * * * * sh ~/bin/probes/disk-usage.sh /dev/vda 50 https://discordapp.com/api/webhook/dqdqw
+# Checks if disk usage exceed a certain %
+# If so, sends a push notification via discord
+# example cron:
+# 0 * * * * disk-usage /dev/vda 50 https://discordapp.com/api/webhook/abcxyz
 
 DISCORD=$(which discord)
 
@@ -13,7 +13,7 @@ usage() {
 
 if [ ! -x "$DISCORD" ]; then
   echo "Discord executable not found in PATH"
-  echo "hint: mv ~/.dotfiles/discord.sh ~/bin && chmod +x ~/bin/discord"
+  echo "hint: mv ~/.dotfiles/bin/discord ~/bin && chmod +x ~/bin/discord"
   exit 1
 fi
 
