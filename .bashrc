@@ -28,17 +28,21 @@ alias tls='tmux ls'
 # Docker aliases
 alias d='docker'
 alias dc='docker-compose'
-function dsh {
-  docker exec -it $1 bash
+function dit {
+  docker exec -it $1 $2
 }
 
 # Other aliases
 alias j='jobs'
 
+function uuid {
+  uuidgen | awk '{print tolower($0)}'
+}
+
 # Curl
 function curlp {
-  echo curl -X POST -d $2 localhost:$1
-  curl -X POST -d $2 localhost:$1
+  echo curl -X POST -d $2 $1
+  curl -X POST -d $2 $1
 }
 
 # Token gen
