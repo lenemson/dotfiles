@@ -29,7 +29,7 @@ alias tls='tmux ls'
 alias d='docker'
 alias dc='docker-compose'
 function dit {
-  docker exec -it $1 $2
+  docker exec -it $1 ${2:-'bash'}
 }
 
 # Other aliases
