@@ -1,15 +1,3 @@
-" **************************************************************************** "
-"                                                                              "
-"                                                         :::      ::::::::    "
-"    .vimrc                                             :+:      :+:    :+:    "
-"                                                     +:+ +:+         +:+      "
-"    By: jibanez <jibanez@42.fr>                    +#+  +:+       +#+         "
-"                                                 +#+#+#+#+#+   +#+            "
-"    Created: 2015/01/14 12:11:04 by jibanez           #+#    #+#              "
-"    Updated: 2015/10/28 14:27:30 by jibanez          ###   ########.fr        "
-"                                                                              "
-" **************************************************************************** "
-
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -19,7 +7,6 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdtree'
 Plugin 'ervandew/supertab'
 Plugin 'airblade/vim-gitgutter'
@@ -48,29 +35,21 @@ filetype plugin indent on    " required
 
 colorscheme iceberg
 
-set number
 syntax on
-set mouse=a
 
-set bs=2
+set background=dark
+set expandtab tabstop=4 softtabstop=4 shiftwidth=4 smartindent
+set noerrorbells
 set number
+set mouse=a
+set backspace=2
 set ruler
-set laststatus=2
 set hlsearch
 set cursorline
-"set textwidth=80
 set nowrap
-
-set expandtab
-set tabstop=2
-set shiftwidth=2
-
 set encoding=utf-8
-
-" Auto NERDTree without focus
-"autocmd vimenter * NERDTree
-" Close vim if the only window left open is a NERDTree
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+set colorcolumn=80
+set incsearch
 
 " Display useless spaces before a /n
 autocmd BufWinEnter * let w:m2=matchadd('Tab', '\t', -1)
@@ -78,21 +57,11 @@ autocmd BufWinEnter * let w:m3=matchadd('Space', '\s\+$\| \+\ze\t', -1)
 highlight Tab ctermbg=NONE guibg=NONE
 highlight Space ctermbg=darkred guibg=darkred
 
+" Auto NERDTree without focus
+"autocmd vimenter * NERDTree
+" Close vim if the only window left open is a NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
 " `gf` opens file under cursor in a new vertical split
 nnoremap gf :vertical wincmd f<CR>
 
-" Airline
-let g:airline_theme='luna'
-let g:airline_powerline_fonts = 1
-
-if !exists('g:airline_symbols')
-  let g:airline_symbols = {}
-endif
-
-" unicode symbols
-let g:airline_left_sep = '▶'
-let g:airline_right_sep = '◀'
-let g:airline_symbols.linenr = '¶'
-let g:airline_symbols.branch = '⎇'
-let g:airline_symbols.paste = 'ρ'
-let g:airline_symbols.whitespace = 'Ξ'
