@@ -50,3 +50,7 @@ Temp
 
 # Tmux
 tmux-client-*.log
+
+# vscode
+.vscode
+*.session.sql

@@ -2,7 +2,7 @@
 	excludesfile = ~/.gitignore_global
 	editor = vim
 [user]
-	name = lenemson
+	name = Jeremy Ibanez
 	email = jeremy.ibanez@protonmail.com
 [push]
 	default = matching
