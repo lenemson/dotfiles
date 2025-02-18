@@ -9,3 +9,7 @@ export AWS_SECRET_ACCESS_KEY=
 export BUCKET_NAME=
 
 restic -r s3:s3.amazonaws.com/$BUCKET_NAME "$@"
+
+unset AWS_ACCESS_KEY_ID
+unset AWS_SECRET_ACCESS_KEY
+unset BUCKET_NAME
